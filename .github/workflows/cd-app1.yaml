@@ -1,0 +1,15 @@
+name: CD (app1)
+
+on:
+  registry_package:
+    types: [published]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: hmarr/debug-action@v2
